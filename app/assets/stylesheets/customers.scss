@@ -1,3 +1,58 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body
+{
+	background-color: #E1DDCE !important;
+}
+
+.customerTableData
+{
+	width: 265px;
+	height: 410px;
+}
+
+.customerStuff table
+{
+	margin-top: 14px;
+	width: 900px;
+}
+
+.customerStuff tr
+{
+	display: inline;
+}
+
+.customerStuff tr td
+{
+	border:1pt solid black;
+	background-color: white;
+	overflow: hidden;
+	box-shadow: 2px 2px 1px gray;
+	padding: 11px;
+}
+
+.customerStuff tr td h2
+{
+	padding-top: 22px;
+}
+
+.customerStuff tr td .editLink
+{
+	float: right;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.customerImage
+{
+	width: 91px;
+	height: 121px;
+	display: block;
+}
+
+.customerDataHeader
+{
+	display: inline-block;
+}
