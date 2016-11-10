@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <nav>
+	  <ul>
+	    <li><%= link_to 'All Customers', root_path %></li>
+		<li><%= link_to 'Alphabetized Customers', alphabetized_path %></li>
+		<li><%= link_to 'Customers Without Addresses', missing_email_path %></li>
+		<li><%= link_to 'Add a new customer', new_customer_path %></li>
+	  </ul>
+	</nav>
+  
     <%= yield %>
   </body>
 </html>

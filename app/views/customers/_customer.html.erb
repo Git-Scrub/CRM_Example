@@ -1,32 +1,21 @@
-<h1>All Customers</h1>
-<%= link_to 'New Customer', new_customer_path %>
-
-<table class="customerStuff">
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td>
-			<div class="customerTableData">
-				<%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'editLink' %>
-				<%= link_to 'edit', edit_customer_path(customer), :class => 'editLink' %>
-				<h2><%= customer.full_name %></h2>
-				<% if not (customer.image.blank?) then %>
-					<%= image_tag( customer.image, :alt => "Customer Image", :class => 'customerImage') %>
-				<% end  %>
-				<% if not (customer.phone_number.blank?) then %>
-					<h3 class='customerDataHeader'>Phone:</h3> <%= customer.phone_number %><br>
-				<% end  %>
-				<% if not (customer.email_address.blank?) then %>
-					<h3 class='customerDataHeader'>Email:</h3> <%= customer.email_address %><br>
-				<% end  %>
-				<% if not (customer.Notes.blank?) then %>
-					<h3 class='customerDataHeader'>Notes:</h3> <%= customer.Notes %><br>
-				<% end  %>
-			</div>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<tr>
+  <td>
+	<div class="customerTableData">
+		<%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'editLink' %>
+		<%= link_to 'edit', edit_customer_path(customer), :class => 'editLink' %>
+		<h2><%= customer.full_name %></h2>
+		<% if not (customer.image.blank?) then %>
+			<%= image_tag( customer.image, :alt => "Customer Image", :class => 'customerImage') %>
+		<% end  %>
+		<% if not (customer.phone_number.blank?) then %>
+			<h3 class='customerDataHeader'>Phone:</h3> <%= customer.phone_number %><br>
+		<% end  %>
+		<% if not (customer.email_address.blank?) then %>
+			<h3 class='customerDataHeader'>Email:</h3> <%= customer.email_address %><br>
+		<% end  %>
+		<% if not (customer.Notes.blank?) then %>
+			<h3 class='customerDataHeader'>Notes:</h3> <%= customer.Notes %><br>
+		<% end  %>
+	</div>
+  </td>
+</tr>
