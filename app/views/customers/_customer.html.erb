@@ -16,6 +16,12 @@
 		<% if not (customer.Notes.blank?) then %>
 			<h3 class='customerDataHeader'>Notes:</h3> <%= customer.Notes %><br>
 		<% end  %>
+		<h3 class='customerDataHeader'>Province:</h3>
+		<% if not customer.province.blank? then %>
+			<%= customer.province.name %>
+		<% else %>
+			None
+		<% end %>
 	</div>
   </td>
 </tr>
